@@ -1,5 +1,5 @@
 // Base URL
-const BASE_URL = "https://api.rwg.io/api/";
+const BASE_URL = "https://api.rawg.io/api/";
 
 // get current month
 const getCurrentMonth = () => {
