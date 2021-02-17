@@ -9,6 +9,7 @@ import { loadGames } from "../actions/gamesAction";
 //Components
 import Game from "../components/Game";
 import GameDetail from "../components/GameDetail";
+import { fadeIn } from "../animations";
 
 const Home = () => {
   //get the current location
@@ -25,7 +26,7 @@ const Home = () => {
     (state) => state.games
   );
   return (
-    <GameList>
+    <GameList variants={fadeIn} initial="hidden" animate="show">
       <AnimateSharedLayout>
         <AnimatePresence type="crossfade">
           {pathId && <GameDetail pathId={pathId} />}
